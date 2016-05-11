@@ -1,0 +1,14 @@
+import {Component} from '@angular/core';
+
+@Component({
+	selector: 'click-me',
+	template: `<div><button (click)= 'onClickMe()' >Click Me!</button> 
+				{{clickMessage}}</div>`
+ })
+
+export class ClickMeComponent{
+	clickMessage = '';
+	onClickMe = function(){
+		this.clickMessage = 'You are my hero!';
+	}
+}
