@@ -11,11 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        //simple way
+        //title = 'Tour of Heroes';
+        //hero = 'Windrotm';
+        //another way for variable initialization using Constructor
+        // title: string;
+        // hero: string;
+        // constructor(){
+        // 	this.title = 'Tour of Heroes';
+        // 	this.hero = 'Windrotm';
+        // }
+        //way used in tutorial
+        this.title = 'Tour of Heroes';
+        this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+        this.myHero = this.heroes[0];
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 app!!  Change Test</h1>'
+            template: "<h1>{{title}}</h1>\n\t\t\t\t<h2>My favorite hero is {{myHero}} </h2>\n\t\t\t\t<p>Heroes</p>\n\t\t\t\t<ul>\n\t\t\t\t<li *ngFor=\"let hero of heroes\"> \n\t\t\t\t{{hero}}\n\t\t\t\t</li>\n\t\t\t\t</ul>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
