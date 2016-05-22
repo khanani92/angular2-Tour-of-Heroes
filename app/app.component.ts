@@ -1,17 +1,23 @@
 import {Component} from '@angular/core';
 import { Hero } from './hero';
-
+import { ClickMeComponent } from './click-me.component';
+import { KepUpComponent1 } from './keyup.components';
+import { LoopbackComponent } from './loop-back.component';
+import { KepUpComponent2 } from './keyup.components';
+import { KepUpComponent3 } from './keyup.components';
+import { KepUpComponent4 } from './keyup.components';
+import { LittleTourComponent } from './little-tour.component';
 @Component({
 	selector: 'my-app',
-	template: `<h1>{{title}}</h1>
-				<h2>My favorite hero is {{myHero.name}} </h2>
-				<p>Heroes</p>
-				<ul>
-				<li *ngFor="let hero of heroes"> 
-				{{hero.name}}
-				</li>
-				</ul>
-				 <p *ngIf="heroes.length > 3">There are many heroes!</p>`
+	templateUrl:  'app/app.component.html',
+	directives: [
+		ClickMeComponent, 
+		KepUpComponent1, 
+		LoopbackComponent, 
+		KepUpComponent2,
+		KepUpComponent3,
+		KepUpComponent4,
+		LittleTourComponent]
 })
 
 export class AppComponent{

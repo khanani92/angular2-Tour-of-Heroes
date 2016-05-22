@@ -10,6 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var hero_1 = require('./hero');
+var click_me_component_1 = require('./click-me.component');
+var keyup_components_1 = require('./keyup.components');
+var loop_back_component_1 = require('./loop-back.component');
+var keyup_components_2 = require('./keyup.components');
+var keyup_components_3 = require('./keyup.components');
+var keyup_components_4 = require('./keyup.components');
+var little_tour_component_1 = require('./little-tour.component');
 var AppComponent = (function () {
     function AppComponent() {
         //simple way
@@ -36,7 +43,15 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>{{title}}</h1>\n\t\t\t\t<h2>My favorite hero is {{myHero.name}} </h2>\n\t\t\t\t<p>Heroes</p>\n\t\t\t\t<ul>\n\t\t\t\t<li *ngFor=\"let hero of heroes\"> \n\t\t\t\t{{hero.name}}\n\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t <p *ngIf=\"heroes.length > 3\">There are many heroes!</p>"
+            templateUrl: 'app/app.component.html',
+            directives: [
+                click_me_component_1.ClickMeComponent,
+                keyup_components_1.KepUpComponent1,
+                loop_back_component_1.LoopbackComponent,
+                keyup_components_2.KepUpComponent2,
+                keyup_components_3.KepUpComponent3,
+                keyup_components_4.KepUpComponent4,
+                little_tour_component_1.LittleTourComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
